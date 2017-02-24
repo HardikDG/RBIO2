@@ -2,11 +2,11 @@ import { ingredients } from './../models/ingredients';
 export class ShoppingListService {
     private Ingredients: ingredients[] = [];
 
-    addItem(name:string, amount:number){
-        this.Ingredients.push(new ingredients(name,amount));
+    addItem(name: string, amount: number) {
+        this.Ingredients.push(new ingredients(name, amount));
     }
 
-    addItems(items: ingredients[]){
+    addItems(items: ingredients[]) {
         this.Ingredients.push(...items);
     }
 
@@ -14,7 +14,7 @@ export class ShoppingListService {
         return this.Ingredients.slice();
     }
 
-    removeItem(index: number){
-        this.Ingredients.slice(index,1);
+    removeItem(index: number) {
+        this.Ingredients.splice(index, 1);
     }
 }
