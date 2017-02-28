@@ -1,3 +1,4 @@
+import { RecipesService } from './../services/recipes';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -31,6 +32,6 @@ import { ShoppingListService } from './../services/shopping-list';
     ShoppingListPage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},ShoppingListService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},ShoppingListService,RecipesService]
 })
 export class AppModule {}
